@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         pathname: "/PokeAPI/**"
       },
+      {
+        protocol: "https",
+        hostname: "https://static.wikia.nocookie.net/",
+        port: "",
+        pathname: "/pokemongo_es_gamepedia/*"
+      }
     ],
   },
   reactStrictMode: true,

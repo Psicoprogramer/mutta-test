@@ -7,7 +7,7 @@ const Page = () => {
   
   return (
     <>
-      <Header/>
+      <Header></Header>
       <PokemonList/>
       <ScrollToTopButton></ScrollToTopButton>
     </>

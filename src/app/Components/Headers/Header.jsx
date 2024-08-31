@@ -1,8 +1,6 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import Search from "../Inputs/Search";
-import { useState } from "react";
 
 const Header = () => { 
 
@@ -14,10 +12,8 @@ const Header = () => {
               height={50} >
         </Image>
        <div className="flex w-full items-center justify-evenly">
-            <Link href ={'/Home' } >Home</Link>
-            <Link href ={'/Buscar'} >Pokemos</Link>
-            <Link href ={'/Comparar'} >Comparar</Link>
-            <Link href ={'/Favoritos'}>Favoritos</Link>
+            <Link href ={'/' } >Home</Link>
+            <Link href ={'/Pokeapi'} >PokeDex</Link>
        </div>
     </div>
     </>

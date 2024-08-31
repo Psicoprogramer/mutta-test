@@ -5,7 +5,7 @@ class ApiServices {
 
     async fetchData(offset) {
         try {
-            const res = await fetch(`${this.baseUrl}?offset=${offset}`);
+            const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${20 * offset}`);
             if (!res.ok) {
                 throw new Error(`HTTP error! Status: ${res.status}`);
             }

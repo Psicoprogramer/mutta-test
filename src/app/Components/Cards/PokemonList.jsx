@@ -21,7 +21,7 @@ export default function PokemonList() {
     if (observer.current) observer.current.disconnect();
     observer.current = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting && hasMore) {
-        setOffset(prevOffset => prevOffset + 20);
+        setOffset(prevOffset => prevOffset + 1);
       }
     });
     if (node) observer.current.observe(node);
@@ -50,17 +50,19 @@ export default function PokemonList() {
       <Search data={data} setFilteredData={setFilteredData} />
       <section className="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
         {filteredData.map((pokemon, index) => {
-          const pokemonId = pokemon.url?.split('/').filter(Boolean).pop();
-          const pokemonName = pokemon.name || 'Unknown';
-
+          const pokemonId = pokemon.url?.split("/")[6];
+          const pokemonName = pokemon.name || "Unknown";
           return (
             <div
               key={pokemonId}
               ref={filteredData.length === index + 1 ? lastElementRef : null} // Attach ref only to the last element
             >
-              <Link href={`/pokemon/${pokemonId}`}>
+              <Link href={`/Pokeapi/${pokemonId}`}>
                 <div className="bg-gradient-to-br from-green-700 to-green-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
                   <div className="p-3 flex flex-col h-full">
+                    <h2 className="text-white font-bold text-center p-2">
+                      {pokemonName}
+                    </h2>
                     <Image
                       className="rounded-full shadow-sm"
                       src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${pokemonId}.png`}
@@ -68,7 +70,6 @@ export default function PokemonList() {
                       width={150}
                       height={150}
                     />
-                    <h2 className="text-white font-bold text-center p-2">{pokemonName}</h2>
                   </div>
                 </div>
               </Link>
@@ -76,7 +77,13 @@ export default function PokemonList() {
           );
         })}
       </section>
-      {isLoading && <p>Cargando más...</p>}
+      {isLoading && (
+        <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white p-5">
+          <div className="animate-spin">
+            <Image src="/pokebola.png" alt="Loading" width={100} height={100} />
+          </div>
+        </div>
+      )}
       {!hasMore && <p>No hay más datos para cargar</p>}
     </div>
   );
