@@ -7,7 +7,7 @@ export const metadata = {
   title: "Test Mutta",
   description: "Conexion a la api de PokeApi",
   icons: {
-    icon: "/Pokebola.png",
+    icon: "/pokebola.ico",
   },
 };
 
