@@ -44,7 +44,7 @@ export default function Search({ onSearch }) {
             className="w-full p-3 pl-10 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
           <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-            <Image src="/pokebola.png" alt="Pokébola" width={24} height={24} />
+            <Image src="/pokebola.ico" alt="Pokébola" width={24} height={24} />
           </div>
         </div>
       </div>

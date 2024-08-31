@@ -9,7 +9,7 @@ export default function Home() {
         {/* Logo */}
         <div className="flex items-center mb-4 lg:mb-0">
           <Image
-            src="/pokebola.png"
+            src="/pokebola.ico"
             alt="Pokebola Logo"
             width={50}
             height={50}
@@ -61,7 +61,7 @@ export default function Home() {
             Poke Test{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1">
               <Image
-                src="/pokebola.png"
+                src="/pokebola.ico"
                 width={30}
                 height={30}
                 alt="Pokebola"

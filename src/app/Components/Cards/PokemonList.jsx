@@ -128,7 +128,7 @@ export default function PokemonList() {
           {isLoading && (
             <div className="flex justify-center items-center min-h-screen bg-gray-800 bg-opacity-75 text-white p-5">
               <div className="animate-spin">
-                <Image src="/pokebola.png" alt="Loading" width={100} height={100} />
+                <Image src="/pokebola.ico" alt="Loading" width={100} height={100} />
               </div>
             </div>
           )}
