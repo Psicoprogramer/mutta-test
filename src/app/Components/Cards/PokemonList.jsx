@@ -88,7 +88,7 @@ export default function PokemonList() {
       {showSpinner && (
         <div className="flex justify-center items-center min-h-screen bg-gray-800 bg-opacity-75 text-white p-5 absolute inset-0 z-50">
           <div className="animate-spin">
-            <Image src="/pokebola.png" alt="Loading" width={100} height={100} />
+            <Image src="/pokebola.ico" alt="Loading" width={100} height={100} />
           </div>
         </div>
       )}
